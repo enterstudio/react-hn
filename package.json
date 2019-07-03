@@ -18,7 +18,9 @@
     "serve": "nwb serve",
     "copy-manifest": "cp public/manifest.json dist/manifest.json",
     "generate-sw": "node generate-sw.js",
-    "clean": "rm -rf *.json.gzip dist/index.html"
+    "clean": "rm -rf *.json.gzip dist/index.html",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
   },
   "engines": {
     "node": "6.1.0"
@@ -46,11 +48,13 @@
     "reactfire": "1.0.0",
     "scroll-behavior": "0.8.1",
     "setimmediate": "1.0.5",
-    "url-parse": "^1.1.1"
+    "url-parse": "^1.1.1",
+    "snyk": "^1.189.0"
   },
   "devDependencies": {
     "html-webpack-plugin": "2.22.0",
     "webpack": "1.13.2",
     "workbox-build": "0.0.2"
-  }
+  },
+  "snyk": true
 }
